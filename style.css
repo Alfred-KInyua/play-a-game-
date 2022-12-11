@@ -8,7 +8,7 @@ li {
 }
 
 body {
-  background-color: #111111;
+  background-color: rgba(17, 17, 17, 0.836);
   margin: 0;
 }
 
@@ -23,7 +23,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
+  background-color: grey;
+  font-size: x-large;
 }
 
 .btn {
@@ -54,10 +59,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: bolder;
   color: azure;
   position: relative;
+  font-size: xx-large;
 }
 
 .horizantal {
@@ -82,10 +88,40 @@ body {
 input[type='number'] {
   width: 50%;
   padding: 10px 10px;
-  margin-left: 1.6em;
+  margin-left: 3.6em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: rgba(38, 0, 255, 0.938);
+  }
+  .btn1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 2em;
+    padding: 20px 40px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    border: none;
+  }
+  input[type='number'] {
+    width: 40%;
+    margin-left: 5.9em;
+  }
+  .check {
+    margin-left: 0.5em;
+  }
+  .header {
+    background-color: rgba(80, 39, 177, 0.514);
+  }
 }
 /*# sourceMappingURL=style.css.map */
