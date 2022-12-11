@@ -16,7 +16,7 @@ document.querySelector('.check').addEventListener('click', () => {
     document.querySelector('.random').textContent = secret_number;
     let bd = document.querySelector('body');
     bd.classList.toggle('active');
-    document.querySelector('.random').style.padding = '2rem';
+    document.querySelector('.random').style.padding = '.5rem';
 
     if (score > highscore) {
       highscore = score;
