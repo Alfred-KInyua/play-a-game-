@@ -29,12 +29,15 @@ body {
   color: white;
   background-color: grey;
   font-size: x-large;
+  padding: 0;
+  margin: 0;
 }
 
 .btn {
   color: #111111;
   font-size: 2em;
   font-weight: bold;
+  margin-right: 12px;
 }
 
 .btn1 {
@@ -86,9 +89,9 @@ body {
 }
 
 input[type='number'] {
-  width: 50%;
+  width: 70%;
   padding: 10px 10px;
-  margin-left: 3.6em;
+  margin-left: 1em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 1em;
