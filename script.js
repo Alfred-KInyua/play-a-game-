@@ -2,34 +2,33 @@ let sguess = document.querySelector('.start_guessing');
 let secret_number = Math.floor(Math.random() * 20) + 1;
 
 let score = 20;
-
+let highscore = 0;
+const messages = (msg) => {
+  sguess.innerHTML = `${msg}`;
+};
 document.querySelector('.check').addEventListener('click', () => {
   let numGuess = Number(document.querySelector('.guess').value);
+
   if (!numGuess) {
-    sguess.innerHTML = `Add a number`;
+    messages('Add a number');
   } else if (numGuess === secret_number) {
-    sguess.innerHTML = `correct`;
+    messages('Correct');
     document.querySelector('.random').textContent = secret_number;
     let bd = document.querySelector('body');
     bd.classList.toggle('active');
     document.querySelector('.random').style.padding = '2rem';
-  } else if (numGuess > secret_number) {
+
+    if (score > highscore) {
+      highscore = score;
+      high = document.querySelector('.highscore').textContent = highscore;
+    }
+  } else if (numGuess > secret_number || numGuess < secret_number) {
     if (score == 1) {
-      sguess.innerHTML = `You lost!`;
+      messages('You lost!');
     } else {
-      sguess.innerHTML = `Too HIgh`;
+      messages(numGuess > secret_number ? 'Too High' : 'Too Low');
       score--;
       Number((document.querySelector('.scores').textContent = score));
-    }
-  } else if (numGuess < secret_number) {
-    if (score == 1) {
-      sguess.innerHTML = `You Lost!`;
-    } else {
-      sguess.innerHTML = `Too Low`;
-      score--;
-      const scores = Number(
-        (document.querySelector('.scores').textContent = score)
-      );
     }
   }
 });
@@ -40,4 +39,6 @@ again.addEventListener('click', () => {
   Number((document.querySelector('.guess').value = 0));
   document.querySelector('.start_guessing').textContent = 'start guessing';
   Number((document.querySelector('.scores').textContent = score));
+  document.querySelector('body').classList.remove('active');
+  document.querySelector('.random').textContent = '?';
 });
