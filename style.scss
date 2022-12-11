@@ -4,8 +4,12 @@
 li {
   list-style: none;
 }
-body {
+.body {
   background-color: rgb(17, 17, 17);
+  margin: 0;
+}
+.body .active {
+  background-color: rgb(35, 236, 8);
   margin: 0;
 }
 .header {
