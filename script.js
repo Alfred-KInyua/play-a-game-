@@ -10,9 +10,12 @@ check.addEventListener('click', () => {
     sguess.innerHTML = `Add a number`;
   } else if (numGuess === random) {
     sguess.innerHTML = `correct`;
+    let bd = document.querySelector('body');
+    bd.classList.toggle('active');
+    document.querySelector('.random').style.padding = '2rem';
   } else if (numGuess > random) {
-    if (score == 0) {
-      sguess.innerHTML = `Attempted too many times`;
+    if (score == 1) {
+      sguess.innerHTML = `You lost!`;
     } else {
       sguess.innerHTML = `Too HIgh`;
       score--;
@@ -21,8 +24,8 @@ check.addEventListener('click', () => {
       );
     }
   } else if (numGuess < random) {
-    if (score == 0) {
-      sguess.innerHTML = `Attempted too many times`;
+    if (score == 1) {
+      sguess.innerHTML = `You Lost!`;
     } else {
       sguess.innerHTML = `Too Low`;
       score--;
