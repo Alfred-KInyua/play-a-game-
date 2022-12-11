@@ -18,11 +18,14 @@ body {
   color: white;
   background-color: grey;
   font-size: x-large;
+  padding: 0;
+  margin: 0;
 }
 .btn {
   color: rgb(17, 17, 17);
   font-size: 2em;
   font-weight: bold;
+  margin-right: 12px;
 }
 .btn1 {
   display: flex;
@@ -59,9 +62,9 @@ body {
   margin-left: 20px;
 }
 input[type='number'] {
-  width: 50%;
+  width: 70%;
   padding: 10px 10px;
-  margin-left: 3.6em;
+  margin-left: 1em;
   box-sizing: border-box;
   font-size: 1em;
   text-align: center;
